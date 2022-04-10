@@ -1,0 +1,12 @@
+<form [formGroup]="add_company" action="">
+    <div class="input_container">
+        <input formControlName="name" type="text">
+    </div>
+    <div class="input_container">
+        <input formControlName="manager" type="text">
+    </div>
+    <div class="input_container">
+        <input formControlName="description" type="text">
+    </div>
+    <button (click)="submit()" class="submit">add company</button>
+</form>

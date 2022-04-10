@@ -1,0 +1,38 @@
+.element_wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.element {
+    margin: 1rem;
+    /*border: 1px solid rgb(111, 109, 109);*/
+    border-radius: 4px;
+    padding: 1.5rem;
+    color: #fcfeff;
+    box-shadow: 13px 16px 13px 0px rgb(0 0 0 / 20%);
+    background: #3f344e;
+    /*background: linear-gradient(22deg, rgba(28, 186, 94, 1) 13%, rgba(25, 199, 95, 1) 67%);*/
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.element:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.added_block {
+    background: #1cb85d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.added_block h3 {
+    margin: 0.1rem;
+}

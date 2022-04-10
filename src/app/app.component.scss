@@ -1,0 +1,43 @@
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+header {
+    background: #6a36852e;
+}
+
+.archive_link {
+    background: #1d4dc078;
+    margin: 4rem 1rem 1rem;
+    border-radius: 0.3rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.archive_link:hover {
+    background: #1d4ec0e1;
+}
+
+.archive_link h2 {
+    padding: 1.5rem;
+    color: white;
+    margin: 0.1rem;
+    width: 100%;
+}
+
+.archive_link a {
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    margin: 1.5rem 0 1.5rem;
+}
+
+footer {
+    background: #6a36852e;
+}
