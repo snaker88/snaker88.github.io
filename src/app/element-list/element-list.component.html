@@ -14,11 +14,17 @@
 
         </div>
         <div class="buttons_block">
-            <button (click)="deleted()">deleted</button>
-            <a [routerLink]="['company', company.id]">view</a>
+            <a [routerLink]="['company', company.id]">View</a>
+            <button (click)="delete(company.id)">Delete</button>
         </div>
     </div>
     <a routerLink="add-company" class="element added_block">
         <h3>Add Company</h3>
+    </a>
+</div>
+
+<div class="archive_link">
+    <a href="#">
+        <h2>Show Archive</h2>
     </a>
 </div>

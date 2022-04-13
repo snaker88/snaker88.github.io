@@ -29,8 +29,9 @@ export class ElementListComponent implements OnInit {
     })).subscribe()    
   }
 
-  deleted(){
-    console.log('hi, boy')
+  delete(id?: string){
+    console.log('hi, boy', id)
+    this.http.delete('https://fir-19a39-default-rtdb.firebaseio.com/todos/'+id+'.json').subscribe( ()=>{ this.company = this.company.filter(t=>t.id !==id)})
   }
 
 }
