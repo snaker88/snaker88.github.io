@@ -6,7 +6,10 @@
 }
 
 .element {
+    display: flex;
+    flex-wrap: wrap;
     margin: 1rem;
+    width: 46.5%;
     /*border: 1px solid rgb(111, 109, 109);*/
     border-radius: 4px;
     padding: 1.5rem;
@@ -18,6 +21,23 @@
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.element_main,
+.element_footer {
+    width: 100%;
+}
+
+@media(max-width:960px) {
+    .element {
+        width: 45%;
+    }
+}
+
+@media(max-width:720px) {
+    .element {
+        width: 100%;
+    }
 }
 
 .element:hover {
@@ -35,4 +55,10 @@
 
 .added_block h3 {
     margin: 0.1rem;
+}
+
+.buttons_block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
