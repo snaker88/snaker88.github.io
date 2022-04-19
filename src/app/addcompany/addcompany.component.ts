@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Company } from '../services/database.service';
 import { DatabaseService } from '../services/database.service';
@@ -11,28 +11,30 @@ import { DatabaseService } from '../services/database.service';
 })
 export class AddcompanyComponent implements OnInit {
 
-  add_company: FormGroup
+  addcompany: FormGroup
 
   constructor(private http: HttpClient,
     private database: DatabaseService) { }
 
   ngOnInit(): void {
-    this.add_company = new FormGroup({
-      name: new FormControl('CUCUMBER COMPANY'),
-      manager: new FormControl('Fedor Okeanov'),
-      description: new FormControl('add description')
+    this.addcompany = new FormGroup({
+      name: new FormControl('', Validators.required),
+      manager: new FormControl('', Validators.required),
+      description: new FormControl('')
     })
 
   }
 
   submit(){
     const company: Company = {
-      name: this.add_company.value.name,  
-      descr: this.add_company.value.description,
-      manager: this.add_company.value.manager
+      name: this.addcompany.value.name,  
+      descr: this.addcompany.value.description,
+      manager: this.addcompany.value.manager
     }
     this.http.post<Company>(this.database.list_url, company).subscribe()
-    console.log(this.add_company.value.title)
+    console.log(this.addcompany.value.title)
+
+    this.addcompany.reset()
   }
 
 }

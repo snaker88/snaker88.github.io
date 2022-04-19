@@ -1,12 +1,20 @@
-<form [formGroup]="add_company" action="">
-    <div class="input_container">
-        <input formControlName="name" type="text">
-    </div>
-    <div class="input_container">
-        <input formControlName="manager" type="text">
-    </div>
-    <div class="input_container">
-        <input formControlName="description" type="text">
-    </div>
-    <button (click)="submit()" class="submit">add company</button>
-</form>
+<div class="form_container">
+    <form [formGroup]="addcompany" action="">
+        <div class="input_container">
+            <input placeholder="Company Name" formControlName="name" type="text">
+        </div>
+        <div *ngIf="addcompany.get('name')?.invalid && addcompany.get('name')?.touched" class="validation">
+            <small>field's empty!</small>
+        </div>
+        <div class="input_container">
+            <input placeholder="Manager" formControlName="manager" type="text">
+        </div>
+        <div *ngIf="addcompany.get('manager')?.invalid && addcompany.get('manager')?.touched" class="validation">
+            <small>field's empty!</small>
+        </div>
+        <div class="input_container">
+            <input placeholder="Description" formControlName="description" type="text">
+        </div>
+        <button (click)="submit()" [disabled]="addcompany.invalid" class="submit">add company</button>
+    </form>
+</div>

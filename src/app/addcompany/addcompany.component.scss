@@ -16,6 +16,12 @@ form {
 }
 
 input {
+    &.ng-invalid.ng-touched {
+        border: 1px solid red;
+    }
+    &.ng-valid {
+        border: 1px solid green
+    }
     background-color: #2b223a;
     border-radius: 12px;
     border: 0;
@@ -26,6 +32,11 @@ input {
     outline: 0;
     padding: 4px 20px 0;
     width: 100%;
+}
+
+.validation {
+    padding: 0.2rem;
+    color: red;
 }
 
 .submit {
@@ -45,4 +56,14 @@ input {
 
 .submit:active {
     background-color: #178344;
+}
+
+.big_form {
+    background-color: #3f344e;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    max-width: 620px;
+    margin: 1rem;
+    box-shadow: 13px 16px 13px 0px rgb(0 0 0 / 20%);
 }
